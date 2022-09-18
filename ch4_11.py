@@ -46,10 +46,6 @@ class TreeNode:
         else: # d > self.val
             return self.find(self.right) if self.right else None
 
-    
-    def __repr__(self):
-        return f"### Data: {self.val}, Left: {self.left}, Right: {self.right} ###"
-
 
 if __name__ == "__main__":
     node_vals = [20, 10, 30, 5, 15, 35, 3, 17]
@@ -58,7 +54,7 @@ if __name__ == "__main__":
     for d in node_vals[1:]:
         root.insert(d)
 
-    # Simulate 1000 runs of the function
+    # Simulate 1000000 runs of the function
     count = collections.Counter()
     for _ in range(100000):
         count[str(root.get_random_node().val)] += 1
